@@ -5,7 +5,6 @@
 
 const express = require("express"); // Imports Express's class definition
 const morgan = require("morgan"); // Imports Morgan's class definition
-
 // Imports from our class modules
 
 const Blockchain = require("./src/blockchain");
