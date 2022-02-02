@@ -6,7 +6,7 @@
 
 // * Imports
 
-const Transaction = require("../src/transaction");
+const Transaction = require("./src/transaction");
 
 
 
@@ -42,4 +42,4 @@ function newtransaction(app) {
 
 
 
-module.exports = newtransaction;S
+module.exports = newtransaction;

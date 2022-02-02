@@ -6,7 +6,7 @@
 
 // * Imports
 
-const Transaction = require("../src/transaction");
+const Transaction = require("./src/transaction");
 
 
 
