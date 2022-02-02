@@ -5,6 +5,9 @@
 
 const express = require("express"); // Imports Express's class definition
 const morgan = require("morgan"); // Imports Morgan's class definition
+const Blockchain = require("./src/blockchain");// Imports from our class modules
+
+// Our current transactions
 
 // Initialize express's class object
 const app = express();
@@ -16,6 +19,17 @@ const port = 8080; // See: Wikipedia's List of TCP and UDP port numbers
 
 // Configure our server to run
 require("./routes")(app);
+require("./chain")(app);
+require("./mine")(app);
+require("./newtransaction")(app);
+require("./listtransactions")(app);
+require("./validate")(app);
+
+global.difficulty = 3; // Difficulty to mine a particular block
+
+global.blockchain = new Blockchain(); // Our copy of the blockchain
+
+global.transactions = []; 
 
 app.listen(port, () => {
     // Log that our server is running in the terminal
